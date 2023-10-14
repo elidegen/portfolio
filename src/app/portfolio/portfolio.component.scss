@@ -1,0 +1,11 @@
+.headline {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+        font-size: 64px;
+        margin: 0;
+    }
+}

@@ -1,0 +1,42 @@
+.project {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+
+    img {
+        height: 300px;
+    }
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 600px;
+
+    h1 {
+        margin: 0;
+        font-size: 56px;
+    }
+
+    h3 {
+        margin: 24px 0;
+        font-size: 28px;
+    }
+
+    button {
+        border: 0;
+        font-size: 24px;
+        width: fit-content;
+        padding: 16px 24px;
+        border-radius: 8px;
+        background-color: lightblue;
+        margin-right: 8px;
+
+        &:hover {
+            cursor: pointer;
+            background-color: rgb(151, 210, 230);
+        }
+    }
+}

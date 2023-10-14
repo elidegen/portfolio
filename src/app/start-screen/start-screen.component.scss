@@ -1,0 +1,36 @@
+.startScreen {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+    height: calc(100vh - 84px);
+}
+
+.headline {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-size: 24px;
+    margin-top: 150px;
+    width: 100%;
+    button {
+        border: 0;
+        font-size: 24px;
+        width: fit-content;
+        padding: 16px 24px;
+        border-radius: 8px;
+        background-color: lightblue;
+        &:hover {
+            cursor: pointer;
+            background-color: rgb(151, 210, 230);
+
+        }
+    }
+}
+
+.portrait {
+    display: flex;
+    align-items: flex-end;
+    img {
+        height: 700px;
+    }
+}

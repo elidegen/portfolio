@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    padding: 10px;
+    img{
+        height: 64px;
+    }
+}
+
+.headerLogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 32px;
+}
+
+.headerLinks {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+}

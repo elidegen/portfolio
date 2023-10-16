@@ -4,6 +4,7 @@
     max-width: 100%;
     height: calc(100vh - 104px);
     background-color: lightgrey;
+    box-sizing: border-box;
 }
 
 .headline {
@@ -12,6 +13,7 @@
     justify-content: flex-start;
     margin-top: 150px;
     width: 100%;
+    overflow: hidden;
 
     button {
         border: 0;

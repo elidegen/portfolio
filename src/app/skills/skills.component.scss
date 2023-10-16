@@ -1,0 +1,44 @@
+.skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: lightgrey;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 256px;
+    h1{
+        margin-top: 50px;
+    }
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 25px;
+
+    .icon {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 25px 25px;
+        flex: 0 0 calc(20% - 50px);
+        text-align: center;
+    }
+
+    img {
+        height: 100px;
+        transition: 125ms;
+        &:hover {
+            transform: translateY(-10px);
+            transition: 125ms;
+        }
+    }
+
+    p{
+        color: white;
+        font-size: 24px;
+    }
+}

@@ -1,1 +1,9 @@
-<p>skills works!</p>
+<div class="skills">
+    <h1 class="h1">Skill set</h1>
+    <div class="icons">
+        <div class="icon" *ngFor="let _ of [].constructor(10); let i = index">
+            <img src="assets/img/icons/{{i}}.svg">
+            <p>{{skillDescription[i]}}</p>
+        </div>
+    </div>
+</div>

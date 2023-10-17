@@ -1,0 +1,59 @@
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text {
+    width: 40%;
+
+    h3 {
+        font-size: 32px;
+    }
+
+    p {
+        font-size: 24px;
+    }
+
+    a {
+        font-weight: bold;
+    }
+}
+
+form {
+    width: 40%;
+
+    p {
+        text-align: center;
+    }
+
+    .checkBox {
+        height: unset;
+    }
+
+    fieldset {
+        border: 2px solid lightblue;
+        border-radius: 8px;
+        margin: 10px 0;
+        position: relative;
+        padding: 2px;
+    }
+
+    input, textarea {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 100%;
+        font-size: 20px;
+        border: 0;
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
+.form-group>input {
+    border: none;
+    &:focus {
+        outline: none;
+    }
+}

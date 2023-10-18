@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-project-component',

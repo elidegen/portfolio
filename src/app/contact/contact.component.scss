@@ -2,6 +2,9 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background-color: lightgrey;
+    padding-top: 64px;
+    padding-bottom: 64px;
 }
 
 .text {
@@ -32,7 +35,7 @@ form {
     }
 
     fieldset {
-        border: 2px solid lightblue;
+        border: 2px solid blue;
         border-radius: 8px;
         margin: 10px 0;
         position: relative;
@@ -40,6 +43,7 @@ form {
     }
 
     input, textarea {
+        background-color: lightgrey;
         box-sizing: border-box;
         width: 100%;
         max-width: 100%;

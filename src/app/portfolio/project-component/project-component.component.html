@@ -1,0 +1,19 @@
+<div class="project" *ngFor="let item of projects; let i = index" [ngClass]="{ 'odd': i % 2 == 1 }">
+    <div class="img">
+        <img src="assets/img/laptop.png">
+    </div>
+    <div class="info">
+        <h1>{{projects[i].name}}</h1>
+        <h3>{{projects[i].language}}</h3>
+        <p>{{projects[i].description}}</p>
+        <div class="links">
+            <button>
+                Github
+            </button>
+            <button>
+                Live test
+            </button>
+        </div>
+
+    </div>
+</div>

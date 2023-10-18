@@ -1,6 +1,6 @@
 <div class="project" *ngFor="let item of projects; let i = index" [ngClass]="{ 'odd': i % 2 == 1 }">
     <div class="img">
-        <img src="assets/img/laptop.png">
+        <img src="{{projects[i].img}}">
     </div>
     <div class="info">
         <h1>{{projects[i].name}}</h1>

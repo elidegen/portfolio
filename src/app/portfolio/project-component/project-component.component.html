@@ -7,12 +7,12 @@
         <h3>{{projects[i].language}}</h3>
         <p>{{projects[i].description}}</p>
         <div class="links">
-            <button>
-                Github
-            </button>
-            <button>
-                Live test
-            </button>
+            <a href="{{projects[i].github}}" target="_blank">
+                <button> Github </button>
+            </a>
+            <a href="{{projects[i].ftp}}" target="_blank">
+                <button> Live test </button>
+            </a>
         </div>
 
     </div>

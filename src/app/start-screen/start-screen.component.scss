@@ -1,41 +1,87 @@
 .startScreen {
     display: flex;
-    justify-content: space-between;
+    align-items: flex-start;
     max-width: 100%;
-    height: calc(100vh - 104px);
-    background-color: lightgrey;
-    box-sizing: border-box;
+    height: 100vh;
+    background-color: white;
     position: relative;
 }
 
-.headline {
+// .headline {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;
+//     margin-top: 150px;
+//     width: 100%;
+//     overflow: hidden;
+// }
+
+// .portrait {
+//     display: flex;
+//     align-items: flex-end;
+
+//     img {
+//         height: 700px;
+//     }
+// }
+
+.imgBox {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 150px;
-    width: 100%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    // border: 1px solid black;
+    height: 95%;
+    width: 50%;
     overflow: hidden;
+    margin: auto;
 
-    button {
-        border: 0;
-        font-size: 24px;
-        width: fit-content;
-        padding: 16px 24px;
-        border-radius: 8px;
-        background-color: lightblue;
-
-        &:hover {
-            cursor: pointer;
-            background-color: rgb(151, 210, 230);
-        }
+    img {
+        height: 100%;
+        width: auto;
+        object-fit: cover;
+        text-align: center;
     }
 }
 
-.portrait {
+.rightBox {
+    margin: auto;
+    height: 95%;
+    width: 45%;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-between;
+    div {
+        border-radius: 30px;
+        padding: 50px;
+        background-color: #f1fbff;        
+    }
+}
 
-    img {
-        height: 700px;
+.textBox {
+    border-radius: 30px;
+    padding: 50px;
+    background-color: #f1fbff;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .greeting {
+        font-size: 55px;
+    }
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    background-color: #f1fbff;
+    width: fit-content;
+    a {
+        font-size: 40px;
+        text-decoration: none;
+        font-weight: 800;
     }
 }

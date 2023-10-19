@@ -19,19 +19,4 @@
     p {
         font-size: 24px;
     }
-
-    button {
-        border: 0;
-        font-size: 24px;
-        width: fit-content;
-        padding: 16px 24px;
-        border-radius: 8px;
-        background-color: lightblue;
-        margin-right: 8px;
-
-        &:hover {
-            cursor: pointer;
-            background-color: rgb(151, 210, 230);
-        }
-    }
 }

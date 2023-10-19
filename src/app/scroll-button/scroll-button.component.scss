@@ -1,23 +1,25 @@
 .scroll {
-    transform: rotate(90deg);
-    width: 150px;
-    position: fixed;
-    bottom: 80px;
-    right: 0;
-    font-weight: 600;
-    content: 'hallo';
-    cursor: pointer;
-    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 40px;
+    right: 40px;
+    border: 3px solid grey;
+    border-radius: 50%;
 
     img {
-        height: 12px;
+        height: 50px;
     }
+}
+
+.up {
+    position: fixed;
+}
+
+.down {
+    position: absolute;
 }
 
 .hide {
     display: none;
-}
-
-.scrollUp {
-    transform: rotate(270deg) !important;
 }

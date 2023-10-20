@@ -23,10 +23,6 @@
     src: url('assets/fonts/roboto/Roboto-Medium.ttf') format('truetype');
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: roboto, Arial, Helvetica, sans-serif;
 }
@@ -69,5 +65,7 @@ button {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #002c41;
+    color: #003c58;
+    scroll-behavior: smooth;
+    transition: 125ms;
 }

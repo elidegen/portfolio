@@ -30,10 +30,8 @@
 
     img {
         height: 100px;
-        transition: 125ms;
         &:hover {
             transform: translateY(-10px);
-            transition: 125ms;
         }
     }
 

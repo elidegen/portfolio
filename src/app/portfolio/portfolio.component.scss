@@ -5,11 +5,19 @@
 }
 
 .headline {
+    height: 200px;
+    gap: 50px;
     width: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 
+    h1, p {
+        background-color: #e3f4f8;
+        padding: 30px;
+        border-radius: 30px;
+        height: 100%;
+    }
     p {
         font-size: 24px;
     }

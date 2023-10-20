@@ -10,7 +10,7 @@ export class StartScreenComponent {
 
   @HostListener("window:scroll", ['$event'])
   onWindowScroll(event: Event): void {
-    if (window.scrollY > 930) {
+    if (window.scrollY > 901) {
       document.getElementById('header')!.classList.add('headerTransform');
       document.getElementById('imgBox')!.classList.add('d-none');
     } else {

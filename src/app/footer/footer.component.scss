@@ -1,12 +1,17 @@
 .footer {
     width: 100%;
+    height: 150px;
     background-color: grey;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 64px;
-    padding-bottom: 64px;
     box-sizing: border-box;
+}
+
+.logo {
+    img {
+        height: 45px;
+    }
 }
 
 .copyright {
@@ -15,8 +20,7 @@
     align-items: center;
     justify-content: center;
     font-size: 24px;
-    color: white;
-    a {
+    a, p {
         text-decoration: none;
         color: white;
     }
@@ -27,8 +31,11 @@
     gap: 20px;
     img {
         height: 50px;
-        &:hover {
-            transform: translateY(-10px) scale(1.2);
-        }
+        border-radius: 50%;
     }
+}
+
+.socialMedia::after {
+    content: '';
+    width: 70px;
 }

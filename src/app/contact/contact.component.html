@@ -7,7 +7,7 @@
             projects with my work</p>
         <p>Need a Frontend developer? <a>Contact Me!</a></p>
     </div>
-    
+
     <form (submit)="onFormSubmit($event)">
         <fieldset>
             <legend> Your name </legend>
@@ -21,6 +21,8 @@
             <legend> Your message </legend>
             <textarea type="text" name="message"></textarea>
         </fieldset>
-        <button type="submit">Send</button>
+        <div class="contain">
+            <button class="content" type="submit">Send</button>
+        </div>
     </form>
 </div>

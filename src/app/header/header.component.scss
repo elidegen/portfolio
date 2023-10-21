@@ -1,34 +1,3 @@
-// .header {
-//     display: flex;
-//     justify-content: space-between;
-//     align-items: center;
-//     max-width: 100%;
-//     padding-top: 20px;
-//     background-color: #f1fbff;
-//     padding-bottom: 20px;
-
-//     img {
-//         height: 64px;
-//     }
-// }
-
-// .headerLogo {
-//     display: flex;
-//     align-items: center;
-//     gap: 20px;
-//     font-size: 32px;
-// }
-
-// .headerLinks {
-//     display: flex;
-//     align-items: center;
-//     gap: 20px;
-
-//     a {
-//         text-decoration: none;
-//     }
-// }
-
 .header {
     width: 100%;
     display: flex;
@@ -49,13 +18,22 @@
     height: 70px;
     border-radius: 30px;
     box-shadow: 0 2px 5px 0 rgba($color: #000000, $alpha: .1);
-    a {
-        font-size: 30px;
-        text-decoration: none;
-        font-weight: 800;
-        &:hover {
-            transform: translateX(10px);
-            color: #04569b;
-        }
+}
+
+a {
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 800;
+    box-sizing: content-box;
+    padding: 10px 20px;
+    border-radius: 30px;
+
+    &:hover {
+        transform: translateX(10px);
     }
+}
+
+.currentSection {
+    color: white;
+    background-color: #00d6a5;
 }

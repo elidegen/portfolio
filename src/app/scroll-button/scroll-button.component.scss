@@ -18,10 +18,14 @@
 
 .down {
     position: absolute;
-    bottom: 40px;
-    right: 128px;
+    bottom: 30px;
+    right: 30px;
 }
 
 .hide {
     display: none;
+}
+
+.contain {    
+    z-index: 99;
 }

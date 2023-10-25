@@ -52,7 +52,7 @@ button {
     width: fit-content;
     padding: 16px 24px;
     border-radius: 8px;
-    background-color: #00d6a5;
+    background-color: #00d6a4;
     color: white;
     margin-right: 8px;
 
@@ -88,3 +88,28 @@ button {
         transform: translateY(-10px);
     }
 }
+
+// Colors
+// primary
+$p50: #e3f4f8;
+$p100: #b5e5ef;
+$p200: #82d5e6;
+$p300: #50c5dc;
+$p400: #2cb9d4;
+$p500: #14aecc;
+$p600: #119fb9;
+$p700: #0b8a9f;
+$p800: #067787;
+$p900: #00555d;
+
+// secondary
+$s50: #e0f8ef;
+$s100: #b2edd7;
+$s200: #79e1be;
+$s300: #00d6a4;
+$s400: #00cc90;
+$s500: #00c17c;
+$s600: #00b170;
+$s700: #009e61;
+$s800: #008c54;
+$s900: #006c3c;

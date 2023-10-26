@@ -1,8 +1,9 @@
 .startScreen {
     display: flex;
     max-width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 130px);
     padding: 30px;
+    padding-bottom: 0;
     gap: 30px;
 }
 

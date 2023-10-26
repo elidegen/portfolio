@@ -1,38 +1,40 @@
 .aboutMe {
-    padding-top: 30px;
-    height: 760px;
+    height: calc(100vh - 100px);
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+
+    div {
+        height: 100%;
+    }
 }
 
 .leftSide {
-    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
-    gap: 30px;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
 .h1 {
-
+    display: flex;
+    align-items: center;
     text-align: center;
-    background-color: #e3f4f8;
     border-radius: 20px;
     padding: 50px;
 }
 
 .textRight {
-    height: 100%;
-
     width: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: #e3f4f8;
     border-radius: 20px;
     padding: 50px;
+    text-align: center;
 
     p {
         font-size: 28px;

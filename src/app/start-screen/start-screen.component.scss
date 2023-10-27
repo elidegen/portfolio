@@ -1,10 +1,10 @@
 .startScreen {
     display: flex;
     max-width: 100%;
-    height: calc(100vh - 130px);
-    padding: 30px;
+    height: calc(100vh - 100px);
+    padding: var(--gap);
     padding-bottom: 0;
-    gap: 30px;
+    gap: var(--gap);
 }
 
 .imgBox {
@@ -32,7 +32,8 @@
     border-radius: 20px;
     padding: 50px;
     width: 550px;
-    background-color: #e3f4f8;
+    background-color: var(--primary1);
+    // background-color: var(--primary1);
 }
 
 .textBox {

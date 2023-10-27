@@ -10,7 +10,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 9;
-    padding: 30px 30px 0 30px;
+    padding: var(--gap) var(--gap) 0 var(--gap);
     transition: 250ms;
     background-color: white;
 }
@@ -19,7 +19,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #e3f4f8;
+    background-color: var(--primary1);
     width: 100%;
     padding: 0 30px !important;
     height: 70px;
@@ -35,18 +35,18 @@ a {
     border-radius: 20px;
 
     &:hover {
-        background-color: #00d6a4;
+        background-color: var(--secondary1);
         color: white;
     }
 }
 
 .currentSection {
     color: white;
-    background-color: #00d6a4;
+    background-color: var(--secondary1);
 }
 
 .transform {
-    // padding: 30px 96px 0 96px !important;
+    // padding: var(--gap) 96px 0 96px !important;
     padding-left: 96px;
     padding-right: 96px;
     transition: 250ms;

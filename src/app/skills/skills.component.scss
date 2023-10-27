@@ -7,9 +7,9 @@
     box-sizing: border-box;
 
     h1 {
-        background-color: #e3f4f8;
+        background-color: var(--primary1);
         border-radius: 20px;
-        padding: 30px 50px;
+        padding: var(--gap) 50px;
     }
 }
 
@@ -18,9 +18,9 @@
     flex-wrap: wrap;
     justify-content: space-evenly;
     width: 100%;
-    background-color: #e3f4f8;
+    background-color: var(--primary1);
     border-radius: 20px;
-    padding: 30px;
+    padding: var(--gap);;
 
     .icon {
         display: flex;

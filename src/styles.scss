@@ -25,26 +25,28 @@
 
 body {
     font-family: roboto, Arial, Helvetica, sans-serif;
-    background-color: white;
+    background-color: #18181e;
 }
 
-.padding {
-    padding-left: 128px !important;
-    padding-right: 128px !important;
-    padding-top: 150px;
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary1);
+    border: 1px solid white;
+}
+
+.section>* {
+    width: 100%;
+    max-width: var(--maxWidth);
+    padding: 0 50px;
 }
 
 h1 {
-    font-size: 64px;
-    font-family: roboto, Arial, Helvetica, sans-serif;
-}
-
-.h1 {
-    font-size: 100px !important;
-    white-space: nowrap;
-    // color: #04569b;
+    font-size: 4rem;
     font-family: robotoMedium, Arial, Helvetica, sans-serif !important;
-    font-weight: 100;
+    // font-weight: 600;
+    letter-spacing: 3px;
 }
 
 button {
@@ -58,6 +60,7 @@ button {
 
     &:hover {
         cursor: pointer;
+        background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
         // background-color: #069ae5;
     }
 }
@@ -68,7 +71,7 @@ button {
     padding: 0;
     box-sizing: border-box;
     // color: #003c58;
-    color: black;
+    color: white;
     scroll-behavior: smooth;
     transition: 125ms;
 }
@@ -85,42 +88,20 @@ button {
     cursor: pointer;
 
     &:hover .content {
-        // transform: translateY(-10px);
-        background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
+        transform: translateY(-10px);
     }
 }
 
-// Colors
-// primary
-$p50: #e3f4f8;
-$p100: #b5e5ef;
-$p200: #82d5e6;
-$p300: #50c5dc;
-$p400: #2cb9d4;
-$p500: #14aecc;
-$p600: #119fb9;
-$p700: #0b8a9f;
-$p800: #067787;
-$p900: #00555d;
-
-// secondary
-$s50: #e0f8ef;
-$s100: #b2edd7;
-$s200: #79e1be;
-$s300: #00d6a4;
-$s400: #00cc90;
-$s500: #00c17c;
-$s600: #00b170;
-$s700: #009e61;
-$s800: #008c54;
-$s900: #006c3c;
-
 :root {
-    --primary1: #f7e0ca;
+    font-size: 16px;
+
+    --primary1: #18181e;
     --primary2: lightblue;
 
     --secondary1: #6eaff7;
     --secondary2: coral;
 
     --gap: 15px;
+
+    --maxWidth: 1250px;
 }

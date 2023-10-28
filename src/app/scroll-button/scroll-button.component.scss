@@ -4,11 +4,18 @@
     right: 50px;
 }
 
+.down {
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+    animation: bounce 3s infinite;
+}
+
 .scroll {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--secondary1);
+    // background-color: var(--secondary1);
     border-radius: 15px;
 
     img {
@@ -20,6 +27,18 @@
     display: none;
 }
 
-.contain {    
+.contain {
     z-index: 99;
+}
+
+@keyframes bounce {
+    0% {
+        bottom: 20px;
+    }
+    50% {
+        bottom: 40px;
+    }
+    100% {
+        bottom: 20px;
+    }
 }

@@ -1,42 +1,36 @@
 .aboutMe {
-    height: calc(100vh - 100px);
+    height: 100vh;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+.text {
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
     gap: 30px;
 
-    div {
-        height: 100%;
-    }
-}
-
-.leftSide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.h1 {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    border-radius: 20px;
-    padding: 50px;
-}
-
-.textRight {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--primary1);
-    border-radius: 20px;
-    padding: 50px;
-    text-align: center;
-
     p {
-        font-size: 28px;
+        font-size: 18px;
     }
+}
+
+.image {
+    border-radius: 15px;
+    position: relative;
+    height: 450px;
+    width: 600px;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 450px;
+    }
+}
+
+.bg {
+    opacity: .6;
 }

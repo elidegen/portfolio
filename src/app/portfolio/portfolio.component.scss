@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     gap: 90px;
+    padding-top: 140px;
 }
 
 .headline {
@@ -9,12 +10,13 @@
     gap: 50px;
     width: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    h1, p {
+    h1,
+    p {
         background-color: var(--primary1);
-        padding: var(--gap) 50px;
         border-radius: 20px;
         height: 100%;
         display: flex;
@@ -22,7 +24,7 @@
     }
 
     p {
-        font-size: 24px;
+        font-size: 20px;
         // background-color: unset;
         text-align: center;
         // line-height: 50px;

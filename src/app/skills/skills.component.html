@@ -1,7 +1,23 @@
-<div class="section">
-    <div class="skills padding" id="skills">
+<!-- <div class="section">
+    <div class="skills" id="skills">
         <h1 class="h1">Skill set</h1>
         <div class="icons">
+            <div class="icon" *ngFor="let _ of [].constructor(10); let i = index">
+                <div class="contain">
+                    <img class="svg content" src="assets/img/icons/{{i}}.svg">
+                </div>
+                <p>{{skillDescription[i]}}</p>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="section">
+    <div class="sliderContainer" id="skills">
+        <div class="text">
+            <h1>Skills</h1>
+        </div>
+        <div class="slider">
             <div class="icon" *ngFor="let _ of [].constructor(10); let i = index">
                 <div class="contain">
                     <img class="svg content" src="assets/img/icons/{{i}}.svg">

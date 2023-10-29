@@ -1,10 +1,9 @@
 .contact {
-    padding: 150px 0;
+    margin: 150px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 400px;
-    box-sizing: content-box;
     gap: 50px;
 }
 
@@ -47,7 +46,7 @@ form {
     }
 
     fieldset {
-        border: 2px solid #04569b;
+        border: 2px solid var(--secondary1);
         border-radius: 8px;
         position: relative;
         padding: 2px;

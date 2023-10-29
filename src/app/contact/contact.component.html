@@ -1,26 +1,28 @@
-<div class="contact padding" id="contactMe">
+<div class="section">
+    <div class="contact" id="contactMe">
 
-    <div class="text">
-        <h1 class="h1">Contact</h1>
-        <h3>Got a problem to solve?</h3>
-        <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your
-            projects with my work</p>
-        <p>Need a Frontend developer? <a>Contact Me!</a></p>
-    </div>
+        <div class="text">
+            <h1 class="h1">Contact</h1>
+            <h3>Got a problem to solve?</h3>
+            <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your
+                projects with my work</p>
+            <p>Need a Frontend developer? <a>Contact Me!</a></p>
+        </div>
 
-    <form (submit)="onFormSubmit($event)">
-        <fieldset>
-            <legend> Your name </legend>
-            <input type="text" name="name">
-        </fieldset>
-        <fieldset>
-            <legend> Your email </legend>
-            <input type="email" name="email">
-        </fieldset>
-        <fieldset>
-            <legend> Your message </legend>
-            <textarea type="text" name="message"></textarea>
-        </fieldset>
+        <form (submit)="onFormSubmit($event)">
+            <fieldset>
+                <legend> Your name </legend>
+                <input type="text" name="name">
+            </fieldset>
+            <fieldset>
+                <legend> Your email </legend>
+                <input type="email" name="email">
+            </fieldset>
+            <fieldset>
+                <legend> Your message </legend>
+                <textarea type="text" name="message"></textarea>
+            </fieldset>
             <button type="submit">Send</button>
-    </form>
+        </form>
+    </div>
 </div>

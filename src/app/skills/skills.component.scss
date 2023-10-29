@@ -1,21 +1,4 @@
-// .skills {
-//     width: 100%;
-//     height: 100vh;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     gap: 50px;
-//     box-sizing: border-box;
-
-//     h1 {
-//         background-color: var(--primary1);
-//         border-radius: 20px;
-//         padding: var(--gap) 50px;
-//     }
-// }
-
-.sliderContainer {
+.skills {
     display: flex;
     align-items: center;
 }
@@ -31,45 +14,86 @@
     border-radius: 24px 0 0 24px;
 }
 
-.slider {
-    height: 120px;
+.sliderContainer {
     display: flex;
+    height: 120px;
     flex: 1;
-    overflow-x: scroll;    
+    position: relative;
+    overflow: hidden;
     border: 2px solid var(--primary2);
     border-radius: 0 24px 24px 0;
-    padding: 0 10px;
 }
 
-// .icons {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: space-evenly;
-//     width: 100%;
-//     background-color: var(--primary1);
-//     border-radius: 20px;
-//     padding: var(--gap);
+.slider {
+    height: 100%;
+    min-width: fit-content;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 0 24px;
+    animation: slide 20s infinite linear;
+}
 
-    .icon {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-        margin: 25px 25px;
-        text-align: center;
-        width: fit-content;
-    }
+.icon {
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 25px 25px;
+    text-align: center;
+    width: fit-content;
 
     img {
         height: 50px;
-
-        &:hover {
-            transform: translateY(-10px);
-        }
     }
+}
 
-    p {
-        font-size: 24px;
-        white-space: nowrap;
+p {
+    font-size: 24px;
+    white-space: nowrap;
+}
+
+.arrow {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 40px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+
+    img {
+        height: 30px;
+        background-color: var(--primary2);
+        padding: 5px;
+        border-radius: 100%;
     }
-// }
+}
+
+.prev {
+    left: 0;
+    background-image: linear-gradient(to right, var(--primary2), transparent);
+    justify-content: flex-start;
+}
+
+.next {
+    right: 0;
+    background-image: linear-gradient(to left, var(--primary2), transparent);
+    justify-content: flex-end;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}

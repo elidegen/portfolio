@@ -48,18 +48,18 @@ h1 {
 }
 
 button {
-    border: 1px solid var(--secondary1);
+    border: 1px solid white;
     font-size: 24px;
     width: fit-content;
     padding: 16px 24px;
     border-radius: 8px;
-    color: var(--secondary1);
+    color: white;
     background-color: var(--primary1);
 
     &:hover {
         cursor: pointer;
-        background-image: linear-gradient(rgb(0 0 0/40%) 0 0);
-        // background-color: #069ae5;
+        border: 1px solid var(--secondary1);
+        color: var(--secondary1);
     }
 }
 

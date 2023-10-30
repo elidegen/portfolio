@@ -8,10 +8,13 @@
 }
 
 .text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
     width: fit-content;
     height: 100%;
     background-color: var(--primary1);
-    padding: 30px;
+    // padding: 30px;
     border-radius: 20px;
 
     h3 {
@@ -31,11 +34,11 @@ form {
     min-width: 500px;
     height: 100%;
     background-color: var(--primary1);
-    padding: 30px;
+    // padding: 30px;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    gap: 20px;
 
     p {
         text-align: center;
@@ -46,10 +49,10 @@ form {
     }
 
     fieldset {
-        border: 2px solid var(--secondary1);
+        border: 1px solid white;
         border-radius: 8px;
         position: relative;
-        padding: 2px;
+        padding: 5px;
     }
 
     input, textarea {
@@ -59,9 +62,7 @@ form {
         max-width: 100%;
         font-size: 20px;
         border: 0;
-        &:focus {
-            outline: none;
-        }
+        outline: none;
     }
 
     textarea {

@@ -12,20 +12,22 @@
         <form (submit)="onFormSubmit($event)">
             <fieldset [ngClass]="">
                 <legend> Your name </legend>
-                <input 
-                onchange="validateName()" 
-                type="text" 
-                name="name"
-                >
+                <input type="text" name="name" id="name" oninput="validate()">
             </fieldset>
+            <div class="validate" id="validateName">halo</div>
+
             <fieldset id="emailFieldset">
                 <legend> Your email </legend>
-                <input onchange="validateEmail()" type="email" name="email" id="email">
+                <input type="email" name="email" id="email" oninput="validate()">
             </fieldset>
+            <div class="validate" id="validateEmail"></div>
+
             <fieldset id="messageFieldset">
                 <legend> Your message </legend>
-                <textarea onchange="validateMessage()" type="text" name="message" id="message"></textarea>
+                <textarea type="text" name="message" id="message" oninput="validate()"></textarea>
             </fieldset>
+            <div class="validate" id="validateMessage"></div>
+
             <button type="submit">Send</button>
         </form>
     </div>

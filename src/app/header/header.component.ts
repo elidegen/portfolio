@@ -11,7 +11,7 @@ export class HeaderComponent {
   @HostListener("window:scroll", ['$event'])
   onWindowScroll(event: Event): void {
     this.scrollPosition = window.scrollY;
-    console.log(this.scrollPosition);
+    // console.log(this.scrollPosition);
     
   }
 }

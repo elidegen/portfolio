@@ -23,7 +23,7 @@
     justify-content: space-between;
 }
 
-a {
+.links a {
     text-decoration: none;
     box-sizing: content-box;
     padding: 10px 20px;
@@ -36,7 +36,9 @@ a {
     }
 }
 
-// .currentSection {
-//     color: white;
-//     background-color: var(--secondary1);
-// }
+.logo {
+    img {
+        height: 40px;
+        border-radius: 5px;
+    }
+}

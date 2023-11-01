@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 
 
 @Component({
@@ -30,5 +29,14 @@ export class ContactComponent {
 
   onFormSubmit(event: Event) {
     this.sendMail(event);
+  }
+
+  validate() {
+    this.validateName();
+    this.validateEmail();
+    this.validateMessage();
+  }
+
+  validateName() {
   }
 }

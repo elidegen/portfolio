@@ -81,7 +81,8 @@ button {
 .contain {
     width: fit-content;
     height: fit-content;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     // border: 1px solid black;
     cursor: pointer;
 

@@ -74,3 +74,13 @@ form {
     margin-top: 5px;
     margin-bottom: 15px;
 }
+
+.invalid {
+    border: 1px solid red !important;
+    input, textarea {
+        background: url('../../assets/img/alert.png');
+        background-repeat: no-repeat;
+        background-position: calc(100% - 5px) 0;
+        background-size: 15px;
+    }
+}

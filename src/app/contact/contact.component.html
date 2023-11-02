@@ -9,26 +9,26 @@
             <p>Need a Frontend developer? <a>Contact Me!</a></p>
         </div>
 
-        <form (submit)="onFormSubmit($event)">
-            <fieldset [ngClass]="">
+        <form #contactForm="ngForm" (ngSubmit)="sendMail($event)">
+            <fieldset>
                 <legend> Your name </legend>
-                <input type="text" name="name" id="name" oninput="validate()">
+                <input type="text" required #name="ngModel" pattern="[a-zA-Z]+$" name="name" ngModel>
             </fieldset>
-            <div class="validate" id="validateName">halo</div>
+            <span *ngIf="name.invalid && name.touched">Please enter valid input</span>
 
             <fieldset id="emailFieldset">
                 <legend> Your email </legend>
-                <input type="email" name="email" id="email" oninput="validate()">
+                <input type="email" email required #email="ngModel" name="email" ngModel>
             </fieldset>
-            <div class="validate" id="validateEmail"></div>
+            <span *ngIf="email.invalid && email.touched">Please enter valid input</span>
 
             <fieldset id="messageFieldset">
                 <legend> Your message </legend>
-                <textarea type="text" name="message" id="message" oninput="validate()"></textarea>
+                <textarea type="text" required #message="ngModel" name="message" ngModel></textarea>
             </fieldset>
-            <div class="validate" id="validateMessage"></div>
+            <span *ngIf="message.invalid && message.touched">Please enter valid input</span>
 
-            <button type="submit">Send</button>
+            <button [disabled]="contactForm.invalid">Send</button>
         </form>
     </div>
 </div>

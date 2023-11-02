@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 
 
 @Component({
@@ -7,7 +7,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  name = ' ';
+  email = '';
+  message = '';
+
   sendMail(event: Event) {
+    console.warn(event);
+    
     event.preventDefault();
     const form = event.target as HTMLFormElement;
     const data = new FormData(form);
@@ -33,10 +39,13 @@ export class ContactComponent {
 
   validate() {
     this.validateName();
-    this.validateEmail();
-    this.validateMessage();
+    // this.validateEmail();
+    // this.validateMessage();
   }
 
   validateName() {
+    if (this.name.trim()) {
+
+    }
   }
 }

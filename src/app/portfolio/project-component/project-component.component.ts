@@ -25,11 +25,11 @@ export class ProjectComponentComponent {
       img: 'assets/img/laptopGame.png'
     },
     {
-      name: 'Join',
-      language: 'Angular | Typescript | HTML | CSS | Firebase',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      github: 'github.com/elidegen/join',
-      ftp: 'https://elijah-degen.developerakademie.net/join/',
+      name: 'Portfolio',
+      language: 'Angular | Typescript | HTML | CSS',
+      description: 'You like the website you are currently on? Of course I created it by myself. Check it out!',
+      github: 'github.com/elidegen/portfolio',
+      ftp: 'https://elijah-degen.developerakademie.net/portfolio/',
       img: 'assets/img/laptop.png'
     },
     {

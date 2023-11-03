@@ -9,26 +9,32 @@
             <p>Need a Frontend developer? <a>Contact Me!</a></p>
         </div>
 
-        <form #contactForm="ngForm" (ngSubmit)="sendMail($event)">
-            <fieldset>
+        <form [formGroup]="contactForm" (ngSubmit)="sendMail($event)">
+            <fieldset [ngClass]="{'invalid': isInvalid('name'), 'valid': isValid('name')}">
                 <legend> Your name </legend>
-                <input type="text" required #name="ngModel" pattern="[a-zA-Z]+$" name="name" ngModel>
+                <input type="text" formControlName="name">
             </fieldset>
-            <span *ngIf="name.invalid && name.touched">Please enter valid input</span>
+            <div class="validate">
+                <span *ngIf="name && name.invalid && name.touched">Please enter your name</span>
+            </div>
 
-            <fieldset id="emailFieldset">
+            <fieldset [ngClass]="{'invalid': isInvalid('email'), 'valid': isValid('email')}">
                 <legend> Your email </legend>
-                <input type="email" email required #email="ngModel" name="email" ngModel>
+                <input type="email" formControlName="email">
             </fieldset>
-            <span *ngIf="email.invalid && email.touched">Please enter valid input</span>
+            <div class="validate">
+                <span *ngIf="email && email.invalid && email.touched">Please enter a valid email adress</span>
+            </div>
 
-            <fieldset id="messageFieldset">
+            <fieldset [ngClass]="{'invalid': isInvalid('message'), 'valid': isValid('message')}">
                 <legend> Your message </legend>
-                <textarea type="text" required #message="ngModel" name="message" ngModel></textarea>
+                <textarea type="text" formControlName="message"></textarea>
             </fieldset>
-            <span *ngIf="message.invalid && message.touched">Please enter valid input</span>
+            <div class="validate">
+                <span *ngIf="message && message.invalid && message.touched">Please enter your message</span>
+            </div>
 
-            <button [disabled]="contactForm.invalid">Send</button>
+            <button [disabled]="contactForm.invalid" [ngClass]="{'disabledButton': contactForm.invalid}">Send</button>
         </form>
     </div>
 </div>

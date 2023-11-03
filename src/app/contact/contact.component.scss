@@ -54,7 +54,8 @@ form {
         padding: 5px;
     }
 
-    input, textarea {
+    input,
+    textarea {
         background-color: var(--primary1);
         box-sizing: border-box;
         width: 100%;
@@ -73,14 +74,58 @@ form {
     min-height: 20px;
     margin-top: 5px;
     margin-bottom: 15px;
+
+    span {
+        color: #e61c40;
+    }
 }
 
 .invalid {
-    border: 1px solid red !important;
-    input, textarea {
+    border: 1px solid #e61c40 !important;
+
+    legend {
+        color: #e61c40;
+    }
+
+    input,
+    textarea {
         background: url('../../assets/img/alert.png');
         background-repeat: no-repeat;
         background-position: calc(100% - 5px) 0;
         background-size: 15px;
     }
+}
+
+.valid {
+    border: 1px solid #70e61c !important;
+
+    legend {
+        color: #70e61c;
+    }
+
+    input,
+    textarea {
+        background: url('../../assets/img/greenTick.png');
+        background-repeat: no-repeat;
+        background-position: calc(100% - 5px) 0;
+        background-size: 15px;
+    }
+}
+
+.disabledButton {
+    color: grey;
+    border: 1px solid grey;
+    cursor: default;
+
+    &:hover {
+        color: grey;
+        border: 1px solid grey;
+        cursor: default;
+    }
+}
+
+button:hover {
+
+    color: #70e61c;
+    border: 1px solid #70e61c;
 }

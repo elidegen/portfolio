@@ -1,4 +1,5 @@
-import { Component, NgModule } from '@angular/core';
+import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 
 @Component({
@@ -7,13 +8,39 @@ import { Component, NgModule } from '@angular/core';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
-  name = ' ';
-  email = '';
-  message = '';
+
+  contactForm = new FormGroup({
+    name: new FormControl('', [Validators.required, Validators.pattern("[a-zA-Z]+$")]),
+    email: new FormControl('', [Validators.required, Validators.email]),
+    message: new FormControl('', [Validators.required])
+  })
+
+  get name() {
+    return this.contactForm.get('name');
+  }
+
+  get email() {
+    return this.contactForm.get('email');
+  }
+
+  get message() {
+    return this.contactForm.get('message');
+  }
+
+  isValid(input: any) {
+    const control = this.contactForm.get(input);
+    return control && control.valid;
+  }
+
+  isInvalid(input: any) {
+    const control = this.contactForm.get(input);
+    return control && control.invalid && control.touched;
+  }
+
 
   sendMail(event: Event) {
     console.warn(event);
-    
+
     event.preventDefault();
     const form = event.target as HTMLFormElement;
     const data = new FormData(form);
@@ -35,17 +62,5 @@ export class ContactComponent {
 
   onFormSubmit(event: Event) {
     this.sendMail(event);
-  }
-
-  validate() {
-    this.validateName();
-    // this.validateEmail();
-    // this.validateMessage();
-  }
-
-  validateName() {
-    if (this.name.trim()) {
-
-    }
   }
 }

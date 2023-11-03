@@ -30,7 +30,7 @@
     display: flex;
     align-items: center;
     overflow-x: scroll;
-    animation: slide 20s infinite linear;
+    animation: slide 25s infinite linear;
 }
 
 .icon {
@@ -54,26 +54,12 @@ p {
 
 .arrow {
     position: absolute;
-    top: 0;
     height: 100%;
     width: 40px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    padding: 0 10px;
-
-    img {
-        height: 30px;
-        background-color: var(--primary2);
-        padding: 5px;
-        border-radius: 100%;
-    }
 }
 
 .prev {
-    left: 0;
     background-image: linear-gradient(to right, var(--primary2), transparent);
-    justify-content: flex-start;
 }
 
 .next {

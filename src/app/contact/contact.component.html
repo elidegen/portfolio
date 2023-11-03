@@ -9,10 +9,10 @@
             <p>Need a Frontend developer? <a>Contact Me!</a></p>
         </div>
 
-        <form [formGroup]="contactForm" (ngSubmit)="sendMail($event)">
+        <form [formGroup]="contactForm" (ngSubmit)="onFormSubmit($event)">
             <fieldset [ngClass]="{'invalid': isInvalid('name'), 'valid': isValid('name')}">
                 <legend> Your name </legend>
-                <input type="text" formControlName="name">
+                <input type="text" formControlName="name" name="name">
             </fieldset>
             <div class="validate">
                 <span *ngIf="name && name.invalid && name.touched">Please enter your name</span>
@@ -20,7 +20,7 @@
 
             <fieldset [ngClass]="{'invalid': isInvalid('email'), 'valid': isValid('email')}">
                 <legend> Your email </legend>
-                <input type="email" formControlName="email">
+                <input type="email" formControlName="email" name="email">
             </fieldset>
             <div class="validate">
                 <span *ngIf="email && email.invalid && email.touched">Please enter a valid email adress</span>
@@ -28,13 +28,13 @@
 
             <fieldset [ngClass]="{'invalid': isInvalid('message'), 'valid': isValid('message')}">
                 <legend> Your message </legend>
-                <textarea type="text" formControlName="message"></textarea>
+                <textarea type="text" formControlName="message" name="message"></textarea>
             </fieldset>
             <div class="validate">
                 <span *ngIf="message && message.invalid && message.touched">Please enter your message</span>
             </div>
 
-            <button [disabled]="contactForm.invalid" [ngClass]="{'disabledButton': contactForm.invalid}">Send</button>
+            <button type="submit" [disabled]="contactForm.invalid" [ngClass]="{'disabledButton': contactForm.invalid}">Send</button>
         </form>
     </div>
 </div>

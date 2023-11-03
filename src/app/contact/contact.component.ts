@@ -10,7 +10,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class ContactComponent {
 
   contactForm = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.pattern("[a-zA-Z]+$")]),
+    name: new FormControl('', [Validators.required, Validators.minLength(1)]),
     email: new FormControl('', [Validators.required, Validators.email]),
     message: new FormControl('', [Validators.required])
   })

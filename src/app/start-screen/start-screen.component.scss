@@ -12,12 +12,14 @@
 
 p {
     font-size: 24px;
+    animation-delay: .1s;
 }
 
 button {
     background-color: unset;
     border: 1px solid white;
     color: white;
+    animation-delay: .2s;
 
     &:hover {
         border: 1px solid var(--secondary1);

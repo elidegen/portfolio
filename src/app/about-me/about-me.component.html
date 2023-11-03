@@ -1,8 +1,8 @@
 <div class="section">
     <div class="aboutMe" id="aboutMe">
         <div class="text">
-            <h1 class="h1 fadeInUp">About me</h1>
-            <p class="fadeInUp">
+            <h1 [ngClass]="{ 'fadeInUp': scrollPosition > 500 }" style="opacity: 0;" class="h1">About me</h1>
+            <p [ngClass]="{ 'fadeInUp': scrollPosition > 500 }" style="opacity: 0;">
                 "As a Front-End Developer, I am passionately dedicated to crafting digital solutions that drive business
                 success. <br><br>
                 My focus on user-centered design and seamless user experiences enables me to showcase brands

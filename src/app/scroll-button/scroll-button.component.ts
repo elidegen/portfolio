@@ -1,18 +1,15 @@
-import { Component, HostListener, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-scroll-button',
   templateUrl: './scroll-button.component.html',
   styleUrls: ['./scroll-button.component.scss']
 })
-export class ScrollButtonComponent implements OnInit {
+export class ScrollButtonComponent {
   scrollPosition: number = 0;
-  ngOnInit() {
-
-  }
 
   @HostListener("window:scroll", ['$event'])
-  onWindowScroll(event: Event): void {
+  onWindowScroll(): void {
     this.scrollPosition = window.scrollY;
   }
 }

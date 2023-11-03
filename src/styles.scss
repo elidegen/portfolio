@@ -110,13 +110,6 @@ button {
 }
 
 @keyframes fadeInUp {
-
-    // 0% {
-    //     transform: translate(0, 150px);
-    // }
-    // 100% {
-    //     transform: translate(0, 0);
-    // }
     from {
         opacity: 0;
         transform: translate3d(0,100%,0)

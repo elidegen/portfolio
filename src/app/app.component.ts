@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'elijah';
   
+  scrollPosition: number = 0;
+
+  @HostListener("window:scroll", ['$event'])
+  onWindowScroll(event: Event): void {
+    this.scrollPosition = window.scrollY;
+  }
 }

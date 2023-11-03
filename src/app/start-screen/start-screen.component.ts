@@ -6,5 +6,5 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./start-screen.component.scss']
 })
 export class StartScreenComponent {
-  scrollPosition: number = 0;
+  
 }

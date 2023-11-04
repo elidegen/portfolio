@@ -23,7 +23,7 @@
 
     img {
         border-radius: 5px;
-        height: 45px;
+        height: 40px;
     }
 }
 
@@ -45,7 +45,6 @@
     a {
 
         &:hover {
-            // color: var(--secondary1);
             text-decoration: underline;
         }
     }
@@ -60,11 +59,9 @@
     img {
         height: 40px;
         border-radius: 50%;
-        // background-color: white;
     }
 }
 
-// .socialMedia::after {
-//     content: '';
-//     width: 70px;
-// }
+@media(max-width: 700px) {
+    
+}

@@ -22,6 +22,9 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.innerWidth = window.innerWidth;
+    if(this.innerWidth > 670) {
+      this.menuShow = false;
+    }
   }
 
   toggleMenu() {

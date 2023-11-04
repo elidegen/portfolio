@@ -73,11 +73,11 @@ a {
 }
 
 .slideOpen {
-    animation: slideOpen 1s forwards;
+    animation: slideOpen 500ms forwards;
 }
 
 .slideClose {
-    animation: slideClose 1s forwards;
+    animation: slideClose 500ms forwards;
 }
 
 @keyframes slideOpen {

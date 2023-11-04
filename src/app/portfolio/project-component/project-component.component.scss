@@ -60,3 +60,19 @@ h1 {
     display: flex;
     gap: 15px;
 }
+
+@media(max-width: 1350px) {
+    .project {
+        flex-direction: column;
+        height: fit-content;
+    }
+
+    .info {
+        align-items: center !important;
+        gap: 20px;
+
+        * {
+            text-align: center;
+        }
+    }
+}

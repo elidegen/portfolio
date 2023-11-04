@@ -49,3 +49,28 @@
         transform: none
     }
 }
+
+@media(max-width: 1350px) {
+    .aboutMe {
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding-top: 140px;
+        padding-bottom: 140px;
+        gap: 50px;
+        height: fit-content;
+        .text {
+            max-width: 100%;
+            *{
+                text-align: center;
+            }
+        }
+    }
+    .image {
+        height: 300px;
+        width: 450px;
+    
+        img {
+            height: 300px;
+        }
+    }
+}

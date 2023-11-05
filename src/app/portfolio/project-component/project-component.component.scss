@@ -3,7 +3,6 @@
     align-items: center;
     justify-content: space-between;
     gap: 30px;
-    height: 400px;
 
     .img {
         display: flex;
@@ -40,11 +39,10 @@
 .info {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    background-color: var(--primary1);
+    // justify-content: space-between;
     padding: 30px;
-    border-radius: 20px;
-    height: 100%;
+    // height: 100%;
+    gap: 30px;
 
     h3 {
         font-size: 24px;
@@ -64,7 +62,6 @@ h1 {
 @media(max-width: 1350px) {
     .project {
         flex-direction: column;
-        height: fit-content;
     }
 
     .info {
@@ -74,5 +71,11 @@ h1 {
         * {
             text-align: center;
         }
+    }
+}
+
+@media(max-width: 800px) {
+    img {
+        height: 200px;
     }
 }

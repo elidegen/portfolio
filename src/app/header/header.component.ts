@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
   onResize(event: Event) {
     this.innerWidth = window.innerWidth;
     if(this.innerWidth > 670) {
-      this.menuShow = false;
+      this.menuShow = false
     }
   }
 

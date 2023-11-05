@@ -135,6 +135,7 @@ button:hover {
         align-items: center;
         .text {
             max-width: 100%;
+        
             *{
                 text-align: center;
             }
@@ -145,5 +146,17 @@ button:hover {
     }
     fieldset {
         width: 100%;
+    }
+}
+
+@media(max-width: 620px) {
+    form {
+        min-width: unset;
+        width: 90%;
+    }
+    .validate {
+        span {
+            white-space: nowrap;
+        }
     }
 }

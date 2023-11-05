@@ -10,7 +10,7 @@
             <a class="content" href="#contactMe">CONTACT ME</a>
         </div>
         <img class="mobileMenu" (click)="toggleMenu()" src="assets/img/menuIcon.svg" *ngIf="innerWidth <= 670">
-        <div class="mobileLinks" [ngClass]="{'slideOpen': menuShow, 'slideClose': !menuShow}" *ngIf="innerWidth <= 670">
+        <div class="mobileLinks" [ngClass]="{'slideOpen': menuShow, 'slideClose': !menuShow}">
             <a class="content" href="#aboutMe">ABOUT ME</a>
             <!-- <a class="content" href="#skills">SKILLS</a> -->
             <a class="content" href="#portfolio">PORTFOLIO</a>

@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
-import { DataService } from 'src/app/data.service';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-project-component',
   templateUrl: './project-component.component.html',
   styleUrls: ['./project-component.component.scss']
 })
-export class ProjectComponentComponent {
+export class ProjectComponentComponent implements OnInit {
+  hiddenElements: any;
   projects = [
     {
       name: 'Join',
@@ -41,4 +41,50 @@ export class ProjectComponentComponent {
       img: 'assets/img/laptop.png'
     },
   ];
+  // observer = new IntersectionObserver((entries) => {
+  //   entries.forEach((entry) => {
+  //     console.log(entry);
+  //     if (entry.isIntersecting) {
+  //       entry.target.classList.add('show');
+  //     } else {
+  //       entry.target.classList.remove('show');
+  //     }
+  //   });
+  // });
+
+  ngOnInit(): void {
+    // this.hiddenElements = document.querySelectorAll('.hidden');
+    // this.hiddenElements.forEach((el: any) => this.observer.observe(el));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        console.log(entry);
+        // if (entry.isIntersecting) {
+        //   entry.target.classList.add('show');
+        // } else {
+        //   entry.target.classList.remove('show');
+        // }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));
+  }
+
+  constructor() {
+
+  }
 }
+
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     console.log(entry);
+//     if (entry.isIntersecting) {
+//       entry.target.classList.add('show');
+//     } else {
+//       entry.target.classList.remove('show');
+//     }
+//   });
+// });
+
+// const hiddenElements = document.querySelectorAll('.hidden');
+// hiddenElements.forEach((el) => observer.observe(el));

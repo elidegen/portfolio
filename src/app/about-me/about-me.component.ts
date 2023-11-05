@@ -11,6 +11,5 @@ export class AboutMeComponent {
   @HostListener("window:scroll", ['$event'])
   onWindowScroll(): void {
     this.scrollPosition = window.scrollY;
-    console.log(this.scrollPosition);
   }
 }

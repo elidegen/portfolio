@@ -17,7 +17,6 @@ export class HeaderComponent implements OnInit {
   @HostListener("window:scroll", ['$event'])
   onWindowScroll(event: Event): void {
     this.scrollPosition = window.scrollY;
-    // console.log(this.scrollPosition);
   }
   
   @HostListener('window:resize', ['$event'])

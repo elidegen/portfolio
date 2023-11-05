@@ -13,5 +13,6 @@ export class AppComponent {
   @HostListener("window:scroll", ['$event'])
   onWindowScroll(event: Event): void {
     this.scrollPosition = window.scrollY;
+    
   }
 }

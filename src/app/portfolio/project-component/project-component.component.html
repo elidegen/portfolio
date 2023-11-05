@@ -1,8 +1,8 @@
 <div class="project" *ngFor="let item of projects; let i = index" [ngClass]="{ 'odd': i % 2 == 1 }">
-    <div class="img">
+    <div class="img hidden">
         <img src="{{projects[i].img}}">
     </div>
-    <div class="info">
+    <div class="info hidden">
         <h1>{{projects[i].name}}</h1>
         <h3>{{projects[i].language}}</h3>
         <p>{{projects[i].description}}</p>

@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit {
     this.scrollPosition = window.scrollY;
     // console.log(this.scrollPosition);
   }
+  
   @HostListener('window:resize', ['$event'])
   onResize(event: Event) {
     this.innerWidth = window.innerWidth;

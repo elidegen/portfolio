@@ -37,3 +37,10 @@
     flex-direction: column;
     gap: 90px;
 }
+
+@media(max-width: 530px) {
+
+    .headline p {
+        width: 100%;
+    }
+}

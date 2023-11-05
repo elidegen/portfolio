@@ -55,6 +55,7 @@ button {
     border-radius: 8px;
     color: white;
     background-color: var(--primary1);
+    white-space: nowrap;
 
     &:hover {
         cursor: pointer;

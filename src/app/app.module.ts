@@ -13,6 +13,8 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { SkillsComponent } from './skills/skills.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProjectComponentComponent } from './portfolio/project-component/project-component.component';
+import { ImprintComponent } from './imprint/imprint.component';
+import { HomepageComponent } from './homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +27,9 @@ import { ProjectComponentComponent } from './portfolio/project-component/project
     FooterComponent,
     PortfolioComponent,
     SkillsComponent,
-    ProjectComponentComponent
+    ProjectComponentComponent,
+    ImprintComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,

@@ -6,13 +6,4 @@ import { Component, HostListener } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'elijah';
-  
-  scrollPosition: number = 0;
-
-  @HostListener("window:scroll", ['$event'])
-  onWindowScroll(event: Event): void {
-    this.scrollPosition = window.scrollY;
-    
-  }
 }

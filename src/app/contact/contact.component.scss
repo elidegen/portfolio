@@ -66,6 +66,14 @@ form {
 
     textarea {
         height: 100px;
+        resize: none;
+
+        &::-webkit-scrollbar {
+            width: 2px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: white;
+        }
     }
 }
 

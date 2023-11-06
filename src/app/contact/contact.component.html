@@ -9,7 +9,7 @@
             <p>Need a Frontend developer? <a>Contact Me!</a></p>
         </div>
 
-        <form [formGroup]="contactForm" (ngSubmit)="onFormSubmit($event)" class="">
+        <form [formGroup]="contactForm" (ngSubmit)="onFormSubmit($event)" class="hidden">
             <fieldset [ngClass]="{'invalid': isInvalid('name'), 'valid': isValid('name')}">
                 <legend> Your name </legend>
                 <input type="text" formControlName="name" name="name">

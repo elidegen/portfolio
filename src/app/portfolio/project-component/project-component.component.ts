@@ -43,7 +43,7 @@ export class ProjectComponentComponent implements AfterViewInit {
     },
   ];
   elements: any;
-  constructor(private elem: ElementRef) { }
+  constructor() { }
 
   ngAfterViewInit(): void {
     this.elements = document.querySelectorAll('.hidden');
@@ -63,8 +63,5 @@ export class ProjectComponentComponent implements AfterViewInit {
         element.classList.add('hideBottom');
       }
     });
-  }
-
-  ngOnInit() {
   }
 }

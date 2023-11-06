@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
 
 @Component({
   selector: 'app-project-component',
@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./project-component.component.scss']
 })
 export class ProjectComponentComponent implements OnInit {
-  hiddenElements: any;
   projects = [
     {
       name: 'Join',
@@ -14,7 +13,7 @@ export class ProjectComponentComponent implements OnInit {
       description: 'Join is a robust Kanban management system designed to help teams efficiently organize, manage, and visualize tasks and projects. With intuitive features, real-time collaboration, and it\'s beautyful design, Join enables seamless teamwork and enhances productivity for every team.',
       github: 'https://github.com/elidegen/join',
       ftp: 'https://elijah-degen.developerakademie.net/join/',
-      img: 'assets/img/laptop.png'
+      img: 'assets/img/laptopJoin.png'
     },
     {
       name: 'Knights Journey',
@@ -41,37 +40,21 @@ export class ProjectComponentComponent implements OnInit {
       img: 'assets/img/laptop.png'
     },
   ];
-  // observer = new IntersectionObserver((entries) => {
-  //   entries.forEach((entry) => {
-  //     console.log(entry);
-  //     if (entry.isIntersecting) {
-  //       entry.target.classList.add('show');
-  //     } else {
-  //       entry.target.classList.remove('show');
-  //     }
+  @ViewChildren('hidden') myElements!: QueryList<ElementRef>;
+
+  ngOnInit () {
+  //   const observer = new IntersectionObserver((entries) => {
+  //     entries.forEach((entry) => {
+  //       console.log(entry);
+  //       // if (entry.isIntersecting) {
+  //       //   entry.target.classList.add('show');
+  //       // } else {
+  //       //   entry.target.classList.remove('show');
+  //       // }
+  //     });
   //   });
-  // });
 
-  ngOnInit(): void {
-    // this.hiddenElements = document.querySelectorAll('.hidden');
-    // this.hiddenElements.forEach((el: any) => this.observer.observe(el));
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        console.log(entry);
-        // if (entry.isIntersecting) {
-        //   entry.target.classList.add('show');
-        // } else {
-        //   entry.target.classList.remove('show');
-        // }
-      });
-    });
-
-    const hiddenElements = document.querySelectorAll('.hidden');
-    hiddenElements.forEach((el) => observer.observe(el));
-  }
-
-  constructor() {
-
+  //   this.myElements.forEach((el) => observer.observe(el.nativeElement));
   }
 }
 

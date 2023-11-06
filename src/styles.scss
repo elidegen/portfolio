@@ -121,6 +121,12 @@ button {
     }
 }
 
+@keyframes fadeInFromLeft {
+    from {
+        // 
+    }
+}
+
 @media(max-width: 620px) {
     .section>* {
         padding: 0 25px;

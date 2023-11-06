@@ -1,7 +1,7 @@
 <div class="section">
     <div class="contact" id="contactMe">
 
-        <div class="text">
+        <div class="text hidden">
             <h1 class="h1">Contact</h1>
             <h3>Got a problem to solve?</h3>
             <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your
@@ -9,7 +9,7 @@
             <p>Need a Frontend developer? <a>Contact Me!</a></p>
         </div>
 
-        <form [formGroup]="contactForm" (ngSubmit)="onFormSubmit($event)">
+        <form [formGroup]="contactForm" (ngSubmit)="onFormSubmit($event)" class="">
             <fieldset [ngClass]="{'invalid': isInvalid('name'), 'valid': isValid('name')}">
                 <legend> Your name </legend>
                 <input type="text" formControlName="name" name="name">

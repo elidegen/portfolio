@@ -1,11 +1,13 @@
-import { Component, ElementRef, OnInit, QueryList, ViewChildren } from '@angular/core';
+import { Component, ElementRef, HostListener, AfterViewInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-project-component',
   templateUrl: './project-component.component.html',
   styleUrls: ['./project-component.component.scss']
 })
-export class ProjectComponentComponent implements OnInit {
+
+export class ProjectComponentComponent implements AfterViewInit {
   projects = [
     {
       name: 'Join',
@@ -40,23 +42,88 @@ export class ProjectComponentComponent implements OnInit {
       img: 'assets/img/laptop.png'
     },
   ];
-  @ViewChildren('hidden') myElements!: QueryList<ElementRef>;
+  elements: any;
+  constructor(private elem: ElementRef) { }
 
-  ngOnInit () {
-  //   const observer = new IntersectionObserver((entries) => {
-  //     entries.forEach((entry) => {
-  //       console.log(entry);
-  //       // if (entry.isIntersecting) {
-  //       //   entry.target.classList.add('show');
+  ngAfterViewInit(): void {
+    this.elements = document.querySelectorAll('.hidden');
+  }
+
+  @HostListener('window:scroll', ['$event'])
+  checkScroll() {
+    this.elements.forEach((element: any) => {
+      const componentPosition = element.offsetTop;
+      const componentHeight = element.offsetHeight;
+      const scrollPosition = window.pageYOffset;
+      const pageBottom = scrollPosition + window.innerHeight;
+      // console.log(pageBottom);
+
+      if (pageBottom >= componentPosition + 170) {
+        element.classList.add('showBottom');
+        element.classList.remove('hideBottom', 'hidden');
+      } else {
+        element.classList.add('hideBottom');
+      }
+    });
+  }
+
+
+
+  // @HostListener('window:scroll', ['$event'])
+  // checkScroll() {
+  //   this.elements.forEach(el => {
+  //     const componentPosition = el.nativeElement.offsetTop
+  //     const scrollPosition = window.pageYOffset
+  //     console.log('yeyy');
+  //     if (scrollPosition >= componentPosition - 100) {
+
+  //       //   this.state = 'show'
   //       // } else {
-  //       //   entry.target.classList.remove('show');
-  //       // }
-  //     });
-  //   });
+  //       //   this.state = 'hide'
+  //     }
 
-  //   this.myElements.forEach((el) => observer.observe(el.nativeElement));
+  //   });
+  // }
+
+
+  ngOnInit() {
   }
 }
+
+
+// @ViewChildren('hidden') myElements!: QueryList<ElementRef>;
+
+
+// @HostListener('window:scroll', ['$event'])
+//   checkScroll() {
+//     this.myElements.forEach(el => {
+//       const componentPosition = el.nativeElement.offsetTop
+//       const scrollPosition = window.pageYOffset
+//       console.log('yeyy');
+//       if (scrollPosition >= componentPosition - 100) {
+
+//         //   this.state = 'show'
+//         // } else {
+//         //   this.state = 'hide'
+//       }
+
+//     });
+//   }
+
+
+//   const observer = new IntersectionObserver((entries) => {
+//     entries.forEach((entry) => {
+//       console.log(entry);
+//       // if (entry.isIntersecting) {
+//       //   entry.target.classList.add('show');
+//       // } else {
+//       //   entry.target.classList.remove('show');
+//       // }
+//     });
+//   });
+
+//   this.myElements.forEach((el) => observer.observe(el.nativeElement));
+
 
 // const observer = new IntersectionObserver((entries) => {
 //   entries.forEach((entry) => {

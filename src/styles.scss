@@ -112,7 +112,7 @@ button {
 @keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translate3d(0,100%,0)
+        transform: translate3d(0, 100%, 0)
     }
 
     to {
@@ -135,5 +135,39 @@ button {
     button {
         font-size: 18px;
         padding: 8px 16px;
+    }
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.showBottom {
+    animation: slideInBottom 250ms forwards;
+}
+
+.hideBottom {
+    animation: slideOutBottom 250ms forwards;
+}
+
+@keyframes slideInBottom {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutBottom {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
     }
 }

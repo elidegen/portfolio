@@ -29,7 +29,7 @@ export class ProjectComponentComponent implements OnInit {
       description: 'You like the website you are currently on? Of course I created it by myself. Check it out!',
       github: 'github.com/elidegen/portfolio',
       ftp: 'https://elijah-degen.developerakademie.net/portfolio/',
-      img: 'assets/img/laptop.png'
+      img: 'assets/img/laptopPortfolio.png'
     },
     {
       name: 'Join',

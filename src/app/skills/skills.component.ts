@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./skills.component.scss']
 })
 export class SkillsComponent {
-  skillDescription = ['Angular', 'TypeScript', 'CSS', 'JavaScript', 'HTML', 'GIT', 'Firebase', 'Material Design', 'Rest-Api', 'Scrum',]
+  skillDescription = ['Angular', 'TypeScript', 'CSS', 'JavaScript', 'HTML', 'GIT', 'Firebase', 'Material Design', 'Rest-Api', 'Scrum', 'Wordpress']
 }

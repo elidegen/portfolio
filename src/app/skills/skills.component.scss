@@ -53,17 +53,17 @@ p {
     white-space: nowrap;
 }
 
-.arrow {
+.shadow {
     position: absolute;
     height: 100%;
     width: 40px;
 }
 
-.prev {
+.left {
     background-image: linear-gradient(to right, var(--primary2), transparent);
 }
 
-.next {
+.right {
     right: 0;
     background-image: linear-gradient(to left, var(--primary2), transparent);
     justify-content: flex-end;

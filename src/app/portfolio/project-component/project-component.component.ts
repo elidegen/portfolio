@@ -12,7 +12,7 @@ export class ProjectComponentComponent implements AfterViewInit {
     {
       name: 'Join',
       language: 'HTML | CSS | Javascript | Firebase',
-      description: 'Join is a robust Kanban management system designed to help teams efficiently organize, manage, and visualize tasks and projects. With intuitive features, real-time collaboration, and it\'s beautyful design, Join enables seamless teamwork and enhances productivity for every team.',
+      description: 'Join is a Kanban management system designed to help teams efficiently organize, manage, and visualize tasks and projects. With intuitive features, real-time collaboration, and it\'s beautyful design, Join enables seamless teamwork and enhances productivity for every team.',
       github: 'https://github.com/elidegen/join',
       ftp: 'https://elijah-degen.developerakademie.net/join/',
       img: 'assets/img/laptopJoin.png'
@@ -27,10 +27,10 @@ export class ProjectComponentComponent implements AfterViewInit {
     },
     {
       name: 'Portfolio',
-      language: 'Angular | Typescript | HTML | CSS',
+      language: 'Angular | Typescript | HTML | SCSS',
       description: 'You like the website you are currently on? Of course I created it by myself. Check it out!',
       github: 'github.com/elidegen/portfolio',
-      ftp: 'https://elijah-degen.developerakademie.net/portfolio/',
+      ftp: 'https://elijah-degen.developerakademie.net/elijah/',
       img: 'assets/img/laptopPortfolio.png'
     },
     {

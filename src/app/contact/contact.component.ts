@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 
@@ -8,6 +8,13 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent {
+  @ViewChild('popUp') popUpDiv: any;
+  @ViewChild('nameInput') nameInput: any;
+  @ViewChild('emailInput') emailInput: any;
+  @ViewChild('msgInput') msgInput: any;
+
+  notification: string = 'Your message could not be sent!';
+  imgUrl: string = 'cross';
 
   contactForm = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(1)]),
@@ -37,6 +44,9 @@ export class ContactComponent {
     return control && control.invalid && control.touched;
   }
 
+  onFormSubmit(event: Event) {
+    this.sendMail(event);
+  }
 
   sendMail(event: Event) {
     console.warn(event);
@@ -44,7 +54,6 @@ export class ContactComponent {
     event.preventDefault();
     const form = event.target as HTMLFormElement;
     const data = new FormData(form);
-    console.log('formadata created');
 
     fetch("https://formspree.io/f/xwkdayqg", {
       method: "POST",
@@ -53,14 +62,24 @@ export class ContactComponent {
         'Accept': 'application/json'
       }
     }).then(() => {
-      console.log('successfully send');
+      this.notification = 'Your message has been sent!';
+      this.imgUrl = 'tick';
 
-    }).catch((error) => {
-      console.log(error);
+    }).catch(() => {
+      this.notification = 'Your message could not be sent!';
+      this.imgUrl = 'cross';
     });
+    setTimeout(() => {
+      this.popUpDiv.nativeElement.classList.add('notification');
+    }, 500);
+    this.popUpDiv.nativeElement.classList.remove('notification');
+
+    // this.clearForm();
   }
 
-  onFormSubmit(event: Event) {
-    this.sendMail(event);
+  clearForm() {
+    this.nameInput.nativeElement.setValue('');
+    this.emailInput.nativeElement.setValue('');
+    this.msgInput.nativeElement.setValue('');
   }
 }

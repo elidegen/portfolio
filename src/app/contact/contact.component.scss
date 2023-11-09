@@ -71,6 +71,7 @@ form {
         &::-webkit-scrollbar {
             width: 2px;
         }
+
         &::-webkit-scrollbar-thumb {
             background-color: white;
         }
@@ -138,21 +139,66 @@ button:hover {
     border: 1px solid #70e61c;
 }
 
+.popUp {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    bottom: -50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 10px 16px 10px 20px;
+    background-color: var(--primary2);
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px 1px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 1px 3px 0px rgba(255, 255, 255, 0.1);
+
+    p {
+        white-space: nowrap;
+    }
+
+    img {
+        height: 30px;
+    }
+}
+
+.notification {
+    animation: notification 3s forwards;
+}
+
+@keyframes notification {
+    0% {
+        bottom: -50px;
+    }
+    20% {
+        bottom: 70px;
+    }
+    80% {
+        bottom: 70px;
+    }
+    100% {
+        bottom: -50px;
+    }
+}
+
 @media(max-width: 1350px) {
     .contact {
         flex-direction: column;
         align-items: center;
+
         .text {
             max-width: 100%;
-        
-            *{
+
+            * {
                 text-align: center;
             }
         }
     }
+
     form {
         align-items: center;
     }
+
     fieldset {
         width: 100%;
     }
@@ -163,9 +209,13 @@ button:hover {
         min-width: unset;
         width: 90%;
     }
+
     .validate {
         span {
             white-space: nowrap;
         }
+    }
+    .popUp {
+        gap: 10px;
     }
 }

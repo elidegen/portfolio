@@ -10,7 +10,7 @@
             <a href="{{projects[i].github}}" target="_blank">
                 <button> Github </button>
             </a>
-            <a href="{{projects[i].ftp}}" target="_blank">
+            <a href="{{projects[i].ftp}}" *ngIf="projects[i].name != 'Portfolio'" target="_blank">
                 <button> Live test </button>
             </a>
         </div>

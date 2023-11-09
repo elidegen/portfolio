@@ -73,29 +73,22 @@
 
 
 
-@media(max-width: 1350px) {
-    .aboutMe {
-        flex-direction: column;
-        justify-content: space-evenly;
-        padding-top: 140px;
-        gap: 50px;
-        height: fit-content;
-
-        .text {
-            max-width: 100%;
-
-            * {
-                text-align: center;
-            }
-        }
+@media(max-width: 900px) {
+    .top {
+        flex-direction: column-reverse;
+        align-items: center;
     }
-
-    .image {
-        height: 300px;
-        width: 450px;
-
-        img {
-            height: 300px;
+    .text {
+        max-width: unset;
+    }
+    .bottom {
+        flex-direction: column;
+        align-items: center;
+        .info {
+            padding-top: 50px;
+            flex-direction: row;
+            align-items: flex-start;
+            width: 100%;
         }
     }
 }
@@ -108,5 +101,10 @@
         img {
             height: 200px;
         }
+    }
+
+    .info {
+        flex-direction: column !important;
+        align-items: center !important;
     }
 }

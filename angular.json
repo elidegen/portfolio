@@ -23,6 +23,7 @@
             "polyfills": [
               "zone.js"
             ],
+            "baseHref": "/angular-projects/elijah/",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [

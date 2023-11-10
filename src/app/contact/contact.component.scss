@@ -14,7 +14,6 @@
     width: fit-content;
     height: 100%;
     background-color: var(--primary1);
-    // padding: 30px;
     border-radius: 20px;
 
     h3 {
@@ -51,30 +50,31 @@ form {
         border-radius: 8px;
         position: relative;
         padding: 5px;
-    }
 
-    input,
-    textarea {
-        background-color: var(--primary1);
-        box-sizing: border-box;
-        width: 100%;
-        max-width: 100%;
-        font-size: 20px;
-        border: 0;
-        outline: none;
-    }
-
-    textarea {
-        height: 100px;
-        resize: none;
-
-        &::-webkit-scrollbar {
-            width: 2px;
+        input,
+        textarea {
+            background-color: var(--primary1);
+            box-sizing: border-box;
+            width: 100%;
+            max-width: 100%;
+            font-size: 20px;
+            border: 0;
+            outline: none;
         }
 
-        &::-webkit-scrollbar-thumb {
-            background-color: white;
+        textarea {
+            height: 100px;
+            resize: none;
+
+            &::-webkit-scrollbar {
+                width: 2px;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: white;
+            }
         }
+
     }
 }
 
@@ -139,6 +139,17 @@ button:hover {
     border: 1px solid #70e61c;
 }
 
+.privacyPolicy {
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    padding-bottom: 30px;
+
+    a {
+        color: var(--secondary1);
+    }
+}
+
 .popUp {
     position: fixed;
     display: flex;
@@ -170,12 +181,15 @@ button:hover {
     0% {
         bottom: -50px;
     }
+
     20% {
         bottom: 70px;
     }
+
     80% {
         bottom: 70px;
     }
+
     100% {
         bottom: -50px;
     }
@@ -215,6 +229,7 @@ button:hover {
             white-space: nowrap;
         }
     }
+
     .popUp {
         gap: 10px;
     }

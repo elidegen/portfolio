@@ -12,6 +12,7 @@ export class ContactComponent {
   @ViewChild('nameInput') nameInput: any;
   @ViewChild('emailInput') emailInput: any;
   @ViewChild('msgInput') msgInput: any;
+  // @ViewChild('checkBoxInput') checkBoxInput: any;
 
   notification: string = 'Your message could not be sent!';
   imgUrl: string = 'cross';
@@ -19,7 +20,8 @@ export class ContactComponent {
   contactForm = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.minLength(1)]),
     email: new FormControl('', [Validators.required, Validators.email]),
-    message: new FormControl('', [Validators.required])
+    message: new FormControl('', [Validators.required]),
+    checkBoxInput: new FormControl('', [Validators.requiredTrue])
   })
 
   get name() {
@@ -49,8 +51,6 @@ export class ContactComponent {
   }
 
   sendMail(event: Event) {
-    console.warn(event);
-
     event.preventDefault();
     const form = event.target as HTMLFormElement;
     const data = new FormData(form);

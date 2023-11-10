@@ -33,14 +33,6 @@ export class ProjectComponentComponent implements AfterViewInit {
       ftp: '',
       img: 'assets/img/laptopPortfolio.png'
     },
-    {
-      name: 'Join',
-      language: 'Angular | Typescript | HTML | CSS | Firebase',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
-      github: 'https://github.com/elidegen/join',
-      ftp: 'https://elijah-degen.developerakademie.net/join/',
-      img: 'assets/img/laptop.png'
-    },
   ];
   elements: any;
   constructor() { }

@@ -136,22 +136,6 @@ button {
     }
 }
 
-.fadeInUp {
-    animation: fadeInUp 2s forwards;
-}
-
-@keyframes fadeInUp {
-    0% {
-        transform: translateY(100%);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
 /* width */
 ::-webkit-scrollbar {
     width: 7px;

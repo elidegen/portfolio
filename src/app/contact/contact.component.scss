@@ -142,11 +142,16 @@ button:hover {
 .privacyPolicy {
     display: flex;
     justify-content: flex-start;
+    align-items: flex-start;
     gap: 15px;
     padding-bottom: 30px;
 
     a {
         color: var(--secondary1);
+    }
+
+    input {
+        margin-top: 3px;
     }
 }
 

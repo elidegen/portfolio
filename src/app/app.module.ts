@@ -16,6 +16,7 @@ import { ProjectComponentComponent } from './portfolio/project-component/project
 import { ImprintComponent } from './imprint/imprint.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SkillsComponent,
     ProjectComponentComponent,
     ImprintComponent,
-    HomepageComponent
+    HomepageComponent,
+    PrivacyPolicyComponent
   ],
   imports: [
     BrowserModule,

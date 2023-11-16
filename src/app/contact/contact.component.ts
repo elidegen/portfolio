@@ -12,7 +12,6 @@ export class ContactComponent {
   @ViewChild('nameInput') nameInput: any;
   @ViewChild('emailInput') emailInput: any;
   @ViewChild('msgInput') msgInput: any;
-  // @ViewChild('checkBoxInput') checkBoxInput: any;
 
   notification: string = 'Your message could not be sent!';
   imgUrl: string = 'cross';

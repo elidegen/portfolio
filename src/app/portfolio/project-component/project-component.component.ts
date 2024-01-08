@@ -10,29 +10,37 @@ import { Component, ElementRef, HostListener, AfterViewInit } from '@angular/cor
 export class ProjectComponentComponent implements AfterViewInit {
   projects = [
     {
+      name: 'DA Bubble',
+      language: 'Angular | Firebase | Typescript | SCSS',
+      description: 'I created a chat app inspired by Slack. It helps teams communicate and work together better.',
+      github: 'https://github.com/elidegen/dabubble',
+      ftp: 'https://dabubble.elijahdegen.de/',
+      img: 'assets/img/laptop.png'
+    },
+    {
       name: 'Join',
-      language: 'HTML | CSS | Javascript | Firebase',
-      description: 'Join is a Kanban management system designed to help teams efficiently organize, manage, and visualize tasks and projects. With intuitive features, real-time collaboration, and it\'s beautyful design, Join enables seamless teamwork and enhances productivity for every team.',
+      language: 'HTML | CSS | Javascript',
+      description: 'Join is a way for teams to manage tasks and projects using Kanban. Check it out!',
       github: 'https://github.com/elidegen/join',
-      ftp: 'https://elijah-degen.developerakademie.net/join/',
+      ftp: 'https://join.elijahdegen.de/',
       img: 'assets/img/laptopJoin.png'
     },
     {
       name: 'Knights Journey',
       language: 'HTML | CSS | Javascript',
-      description: 'Are you ready to prove your bravery and determination to save the kingdom from darkness? Follow in the footsteps of a true knight and experience an exciting adventure in Knight\'s Journey. Become the hero the kingdom desperately needs and defeat the dark forces that threaten it!',
+      description: 'Are you ready to prove your bravery and determination to save the kingdom from the evil forces? Warning: highly addictive!',
       github: 'https://github.com/elidegen/game',
-      ftp: 'https://elijah-degen.developerakademie.net/game/',
+      ftp: 'https://game.elijahdegen.de/',
       img: 'assets/img/laptopGame.png'
     },
-    {
-      name: 'Portfolio',
-      language: 'Angular | Typescript | HTML | SCSS',
-      description: 'You like the website you are currently on? Of course I created it by myself. Check it out!',
-      github: 'https://github.com/elidegen/myWebsite',
-      ftp: '',
-      img: 'assets/img/laptopPortfolio.png'
-    },
+    // {
+    //   name: 'Portfolio',
+    //   language: 'Angular | Typescript | HTML | SCSS',
+    //   description: 'You like the website you are currently on? Of course I created it by myself. Check it out!',
+    //   github: 'https://github.com/elidegen/myWebsite',
+    //   ftp: 'https://elijahdegen.de/',
+    //   img: 'assets/img/laptopPortfolio.png'
+    // },
   ];
   elements: any;
   constructor() { }

@@ -60,6 +60,9 @@
     p {
         text-align: center;
         font-size: 18px;
+        @media(max-width: 900px) {
+            text-align: start;
+        }
     }
 }
 
@@ -88,7 +91,6 @@
         .info {
             padding-top: 50px;
             flex-direction: row;
-            align-items: flex-start;
             width: 100%;
         }
     }

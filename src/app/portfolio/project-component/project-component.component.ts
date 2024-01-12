@@ -37,7 +37,7 @@ export class ProjectComponentComponent implements AfterViewInit {
     //   name: 'Portfolio',
     //   language: 'Angular | Typescript | HTML | SCSS',
     //   description: 'You like the website you are currently on? Of course I created it by myself. Check it out!',
-    //   github: 'https://github.com/elidegen/myWebsite',
+    //   github: 'https://github.com/elidegen/portfolio',
     //   ftp: 'https://elijahdegen.de/',
     //   img: 'assets/img/laptopPortfolio.png'
     // },

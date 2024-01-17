@@ -15,7 +15,7 @@ export class ProjectComponentComponent implements AfterViewInit {
       description: 'I created a chat app inspired by Slack. It helps teams communicate and work together better.',
       github: 'https://github.com/elidegen/dabubble',
       ftp: 'https://dabubble.elijahdegen.de/',
-      img: 'assets/img/laptop.png'
+      img: 'assets/img/laptopDABubble.png'
     },
     {
       name: 'Join',

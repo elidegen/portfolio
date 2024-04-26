@@ -1,4 +1,4 @@
-import { Component, ElementRef, HostListener, AfterViewInit } from '@angular/core';
+import { Component, HostListener, AfterViewInit } from '@angular/core';
 
 
 @Component({
@@ -10,12 +10,12 @@ import { Component, ElementRef, HostListener, AfterViewInit } from '@angular/cor
 export class ProjectComponentComponent implements AfterViewInit {
   projects = [
     {
-      name: 'DA Bubble',
-      language: 'Angular | Firebase | Typescript | SCSS',
-      description: 'I created a chat app inspired by Slack. It helps teams communicate and work together better.',
-      github: 'https://github.com/elidegen/dabubble',
-      ftp: 'https://dabubble.elijahdegen.de/',
-      img: 'assets/img/laptopDABubble.png'
+      name: 'Bubbles',
+      language: 'Angular | Typescript | SCSS | Django',
+      description: 'This is the beta version of our chat app! The app is still under development. Accordingly, we are working on new features and improvements every day.',
+      github: 'https://github.com/elidegen/bubbles',
+      ftp: 'https://bubbleschat.de/',
+      img: 'assets/img/laptopBubbles.PNG'
     },
     {
       name: 'Join',
@@ -32,15 +32,7 @@ export class ProjectComponentComponent implements AfterViewInit {
       github: 'https://github.com/elidegen/game',
       ftp: 'https://game.elijahdegen.de/',
       img: 'assets/img/laptopGame.png'
-    },
-    // {
-    //   name: 'Portfolio',
-    //   language: 'Angular | Typescript | HTML | SCSS',
-    //   description: 'You like the website you are currently on? Of course I created it by myself. Check it out!',
-    //   github: 'https://github.com/elidegen/portfolio',
-    //   ftp: 'https://elijahdegen.de/',
-    //   img: 'assets/img/laptopPortfolio.png'
-    // },
+    }
   ];
   elements: any;
   constructor() { }

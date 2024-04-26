@@ -70,7 +70,7 @@ export class ContactComponent {
     });
     setTimeout(() => {
       this.popUpDiv.nativeElement.classList.add('notification');
-    }, 500);
+    }, 1000);
     this.popUpDiv.nativeElement.classList.remove('notification');
 
     // this.clearForm();
